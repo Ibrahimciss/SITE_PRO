@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Ceci est un commentaire --> 
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<title> Bureau de simulation en mécanique des fluides </title>
+	</head>
+	
+	<body>
+	
+		<div id = "bloc_page">
+		  
+		  <!-- convergence c'est pas la stationnarité mais plutot des écarts faibles entre itérations  -->
+		  <!-- et non pas de la constance des résultats.  -->
+		  <!-- Comprends bien ce que c'est. la solution est en train de varier mais de facon normale. -->
+			  
+			<section class = "logo_cfd_page">
+			<!-- faire un diaporama et le laisser pour toutes les pages ? -->
+				<img src = "cfd.png" alt = "CFD"/>
+						
+			</section>
+			
+			<section class = "sec_cfd">
+				<h1><strong> Mécanique des fluides numérique [CFD]</strong></h1>
+				<div class = "CFD">
+					<div class = ""> 
+						<p>
+							Il s'agit de l'étude des écoulements de fluides par la voie numérique. 
+							Outre sa capacité à traiter des problèmes de géométrie commplexes et 
+							de grandes dimensions, cette approche permet la prédiction de scénarios 
+							des écoulements et nous permet de nous adapter plus facilement à l'évolution
+							de nos connaissances de processus physiques.
+							ou les fluides sont présents. La CFD est aujourd'hui est au coeur de l'analyse, la conception et l'optimisation de systèmes à fluides 
+							dans le monde de l'ingénierie. 
+														
+						</p>
+					</div> 
+					
+					<div class = "CFD_IMG">
+						<img src="cfd.png" alt="CFDD" id = "aile"/>
+						<img src="cfd.png" alt="CFDD" id = "eolien"/>
+						<img src="cfd.png" alt="CFDD" id = "eolien"/>
+					</div>
+				</div>
+			</section>
+			
+			<section class = "sec_cfd ">  
+			
+			<h1>La turbulence en CFD</h1>
+				<p>
+					Tant dans le monde de recherche académique qu'industriel, la quasi totalité des écoulements sont
+					turbulents, les écoulements laminaires  sont quasi absents et ne posent pas de problème particulier 
+					en pratique. 
+					La complexité des écoulements turbulents sont difficiles à résoudre. Les écoulements turbulents sont 
+					le siège/lieu d'une pluralité/variabilité d'échelles spatio temporelles, de mélange et de transfert d'énergie. L'imbrication de 
+					toutes ces hétérogéinoités modes oblige la résoultion de cette d'écoulements par des modèles, l'obtention de tout ce détail 
+					étant une tache plus que rude. Ces modèles permettent d'extraire du mieux que possible les valeurs approchées de quantités physiques voulues mais sont d'utilité 
+					pratique quant à l'application/ la raison de l'étude et les capacités informatiques disponibles, on distingue différentes approches de résolution de la turbulente turbulence.
+										
+				</p>
+			
+			<div class = "cfd_approches">
+			
+				<div>
+					<h1> <strong> RANS et URANS </strong> </h1>
+						<p>
+							La viabilité de cette approche est basée sur l'hypothèse de l'existence d'un champ moyen auquel est superposé des fluctuactions
+						   .Elle vise la détermination du champ moyen et les fluctations ne sont alors pas accsessibles/ sont perdues.
+							
+							Le URANS est l'extension instationnaire du RANS, elle permet de déterminer les instationnarités 
+							(les fluctuations temporelles lentes ne pouvant ete négligées) du champ moyen.
+							Cette approche reste acceptable pour des géométries assez simples, et mauvaises pour en cas de décollements, géomtries complexes.
+						</p>
+					 
+					<div class = "approche_img">
+						<img src="cfd.png" alt="CFD" id = "aile"/>
+					</div>
+				</div>
+				
+				<div >
+					<h1> <strong> Simulation des grandes échelles (LES) </strong> </h1>
+						<p>
+							En LES, les grandes échelles qui contiennent l'essentiel de l'énergie turbulente sont simulées et les petites sont filtrées 
+							et modélisées. La séparation entre petites/grandes échelles étant à choix du modélisateur. La détermination des structures 
+							de l'écoulement proche paroi proche des parois nécéssite une discrétisation fine
+							ce qui alourdir le calcul numériquement.
+							
+						</p>
+					 
+					<div class = "approche_img"> 
+						<img src="cfd.png" alt="CFD" id = "aile"/> 
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class = "cfd_approches">
+			
+				<div>
+			    	<h1><strong> Approche hydride RANS/LES (DES) </strong></h1>
+					<p>
+						La DES(Detached Eddy Simulation) est le couplage du meilleur de méthodes RANS et LES.
+						Le RANS est utilisé proche des parois pour éviter la lourdeur du calcul si on utilise
+						une LES et on utilise le LES ou le RANS ne fonctionne pas.
+					</p> 
+			
+					<div class = "approche_img">
+						<img src="cfd.png" alt="CFD" id = "aile"/>
+					</div> 
+				</div>
+				
+				<div>
+					<h1><strong>Simulation directe (DNS)</strong></h1>
+					<p>
+						C'est la simulation directe des équations de la mécanique des fluides sans modèles, 
+						toutes les échelles sont résolues, cette méthode nécéssite une discrétisation très fine
+						et un temps de calcul donc très élévé. Cetta approche es surtout utile pour la compréhension
+						de la physique et pas en industrie.						
+					</p> 
+				 
+					<div class = "approche_img"> 
+						<img src="cfd.png" alt="CFD" id = "aile"/>
+					</div>
+				</div>
+				
+			</div>	
+			  
+		</section>	
+			
+			<!-- inclure les php-->
+			<!-- inclure le footer en php-->
+		</div>
+		<script src="Javascript.js"></script> <!--La partie du javascript ne marche pas-->
+	</body>
+	
+	
+	<!-- 
+	 
+	Forme site : des liens directs vers les sous menus doivent apparaitre partout sur le site, c'est les memes qui sont présentés (si le visiteur ne va pas en bas pour voir les projets par exemple... et s'il regarde que le site et pas les menus il peut ne pas voir des trucs.
+	
+	1. Acceuil : 
+		présentation + R&D en mécanique numérique. 
+		Qu'est-ce que tu proposes comme services ? spécialisé dans la modélisation et la simulation numérique de problèmes de mécanique F, S IFS. 
+		Des savoirs-faires et les domaines d'application de tes compétences:
+		fluides, solides, IFS
+		Preuves de compétences : mini-projets
+		
+    2. Domaines (de compétences):
+		Mécanique des fluides > modélisation, méthode et outils (savoirs-faire), apprendre.
+		Mécanique des solides > modélisation, méthode et outils, apprendre.
+		Interaction Fluide-structure > modélisation, méthode et outils (non), apprendre.
+	
+	Toutes les pages doivent comporter des liens qui ramènent vers les autres pages du site, elles doivent etre interconnectées.
+	
+	3.  Méthodes et projets
+		- Fluides : [batiments, turbomachines, eolien, aéronautique], matlab, python, logiciel,
+		- Solides : muscle, vélo, pont, ABUQUS, élements finis.
+		- IFS     : je ne sais pas trop, Python. 
+				
+	4. Contact : page php d'envoi: particulier/ société; 
+			  
+				nom & prénoms "particulier"/nom "société", mail de contact, numéro
+				Motif de contact, 
+				Corps de message,
+				Fichier pdf et poids.
+	
+	La moddélisation dc'est la réduction du maillage; DNS sur faible discrétisation =? LES sur la meme discrétisation en termes de calcul ?? 
+	termes de transport ne font que redistribuer l'énergie dans l'écoulement, leur intégrale est nulle, les termes de production et dissipation
+	eux produisent de l'énergie.
+	Dissipation toujours positive. impossible d'avoir une anti dissipation.
+	Production c'est différent de l'anti dissipation peut etre + ou - .
+		modéles linéaires : information transmise instantannément  ce qui est faux. modèles d'advection diffusion.
+		Le problème c'est modéliser nu_t ; si tu tu le fais tu rajoutes de la viscosité physique ; cçà ne devrait pas etre le cas. 
+		L'approche de Bousinesq est fausse comme j'ai dit il faut un équilibre on ne peut pas avoir un écoulement pseudo laminaire.Il faut rajouter 
+		un mois à la modélisation de Reynolds : IBRAHIM CISSE. 
+	URANS : quand présen,ce de différentes d'échelles temporelles.
+
+	La paroi: les gradients sont la bas la fameuse couche  limite. il faut bien traiter la paroi elle gouverne la turnulence si elle existe
+	mais dans les libres y'a de la turbulence libre aussi. 
+	   - reduction des structures à son approche.
+	   - meme loin la taille des structures turbulentes dépend de leur distance à la paroi.
+	   - donc attention à la paroi la tuburlence au dessus dépend d'elle bien sur.
+	   
+	   Modèle universel: valable pour toutes les classes d'écoulements, de configurations normalement mais à l'approche de la paroi c'est bizarre.
+	   La paroi est bizarre; il faut prendre garde à cette paroi. A son approche nu détruit tout, l'universalité (hypothèse = prod = dissip)est faudsse pour la paroi il faut trouver la solution.
+		
+	=> modèles low Re, valable jusqu'en en paroi. Comment ils sont construits alors. y+
+	HIGH Re +  wall functions à la paroi. grand maillage, ne meme pas arriver avec dans la zone tampon (calcul y+ : on prend pas 5<y+<30 prendre 40 comme çà).
+	
+	  On prend souvent une vitesse au dessus de la paroi, et non la nulle à la paroi pour résoudre le détachement.
+	  
+	  LES
+	  A la paroi, on a pas que des structures petites; mais des cohérentes fortement anisotropes qui demandent un raffinement donc elles sont petites alors.
+	  le terme 'petit' est  bizarre déja si on parle de LES : il faut aussi résoudre la paroi mais la LES en paroi concerne les structures 
+	  de graindes tailles par rapport à celles de la paroi. les cohérentes fortement anisotorpes.
+	  
+	  Il faut filtrer et non modifier.
+	  filtre : opérateur mathématique qui si déplace sur le signal et le filtre. on prend généralement dx = sx filtre et maillage sinon faudra toujours prendre 
+	  une taille de maillage plus petite que celle du filtre.
+	   
+
+	Modèles algébriques: ramène tout à des considérations locales.
+	
+				LES :
+	Reduction du temps de calcul vs DNS.
+	Modèles ne sont appliqués qu'aux petites échelles.
+	Permet la simulaiton 3D des structures cohérentes.
+	Pb: le filtre intergit avec le maillage, ...
+	-->
+	
+	
+	
+</html>
